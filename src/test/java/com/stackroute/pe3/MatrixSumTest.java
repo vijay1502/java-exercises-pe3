@@ -6,16 +6,16 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class MultipleArraySumTest {
-MultipleArraySum multipleArraySum;
+public class MatrixSumTest {
+MatrixSum matrixSum;
     @Before
     public void setUp() throws Exception {
-        multipleArraySum=new MultipleArraySum();
+        matrixSum =new MatrixSum();
     }
 
     @After
     public void tearDown() throws Exception {
-        multipleArraySum=null;
+        matrixSum =null;
     }
 
     @Test
@@ -23,7 +23,7 @@ MultipleArraySum multipleArraySum;
         int[][] firstInput={{2,2},{3,3}};
         int[][] secondInput={{2,2},{3,3}};
         int[][] result={{4,4},{6,6}};
-        int[][] actualOutput=multipleArraySum.arraySumMethod(firstInput,secondInput);
+        int[][] actualOutput= matrixSum.arraySumMethod(firstInput,secondInput);
         assertArrayEquals(result,actualOutput);
 
     }

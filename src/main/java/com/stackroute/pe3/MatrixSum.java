@@ -3,7 +3,7 @@ package com.stackroute.pe3;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MultipleArraySum {
+public class MatrixSum {
     public int[][] arraySumMethod(int[][] firstMatrix,int[][] secondMatrix){
         System.out.println("Enter rows and columns");
         Scanner scanner=new Scanner(System.in);
