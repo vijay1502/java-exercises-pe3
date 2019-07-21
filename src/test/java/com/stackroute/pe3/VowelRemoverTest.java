@@ -16,12 +16,19 @@ public class VowelRemoverTest {
     }
 
 @Test
-    public void givenAStringArrayShouldReturnStringArray(){
-        //act
-        String[] arrayList={"India","Australia","NewZeeland"};
-        String[] expectedArray={"Place name without vowels:0 Ind","Place name without vowels:1 Astrl","Place name without vowels:2 NwZlnd"};
-        String[] actualResult= vowelRemover.alphabetRemoveMethod(arrayList);
-        assertArrayEquals(expectedArray,actualResult);
+    public void givenAStringArrayShouldReturnArrayStringRemovingVowels(){
+        String[] a={"India","Australia"};
+        String[] b={"Ind","Astrl"};
+String[] actual=vowelRemover.alphabetRemoveMethod(a);
+assertArrayEquals(b,actual);
 }
+
+    @Test
+    public void givenAStringStringArrayShouldReturnNullIfInputIsNull(){
+        String[] a=null;
+
+        String[] actual=vowelRemover.alphabetRemoveMethod(a);
+        assertNull(actual);
+    }
 
 }

@@ -31,7 +31,7 @@ public class StudentMarksTest {
         int[] array={30,160,40};
 
         String actualResult=studentMarks.studentTestGrade(array);
-        assertEquals("error:The grade is out of limit",actualResult);
+        assertEquals("The grades are out of given limit",actualResult);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class StudentMarksTest {
         int[] array={-20,-60,40};
 
         String actualResult=studentMarks.studentTestGrade(array);
-        assertEquals("error:The grade is out of limit",actualResult);
+        assertEquals("The grades are out of given limit",actualResult);
     }
 
 

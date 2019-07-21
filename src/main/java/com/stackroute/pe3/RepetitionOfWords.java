@@ -4,13 +4,15 @@ import java.io.*;
 import java.util.*;
 
 public class RepetitionOfWords {
-    public static void main(String[] args) throws Exception {
-        File path = new File("/home/cgi/Desktop/Content");
-        Scanner scanner=new Scanner(path);
+    public String wordRepetition(File file) throws Exception {
+
+        /*File file = new File("/home/cgi/Desktop/Content");*/
+        Scanner scanner=new Scanner(file);
         String string;
-        while ((string = scanner.nextLine()) != null){
+       if((string = scanner.nextLine()) != null){
             String[] wordsArray=string.split(" ");
-            int count=1;
+           String[] output=new String[wordsArray.length];
+           int count=1;
 
             for(int i=0;i<wordsArray.length;i++)
             {
@@ -23,11 +25,14 @@ public class RepetitionOfWords {
                         wordsArray[j]="";
                     }
                 }
-                if(wordsArray[i]!="")
-                    System.out.println(wordsArray[i]+" - "+count);
-                count=1;
+                if(wordsArray[i]!=""){
+                    output[i] = (wordsArray[i]+" - "+count);
+                }
 
             }
-        }
+                String result=Arrays.toString(output);
+           return result;
+
+
     }
-}
+return "null is not allowed";}}

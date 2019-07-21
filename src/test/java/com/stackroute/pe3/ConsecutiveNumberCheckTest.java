@@ -18,23 +18,24 @@ public class ConsecutiveNumberCheckTest {
         consecutiveNumberCheck=null;
     }
     @Test
-    public void givenAStringArrayOfDigitsShouldReturnAStringMessageIfConsecutive(){
-       String[] numbersArray={"12","13","14","15"};
+    public void givenAnIntegerArrayShouldReturnStringIfConsecutive(){
+      int[] numbersArray={12,13,14,15};
        String actualResult=consecutiveNumberCheck.consecutiveChecker(numbersArray);
-       assertEquals("The given numbers are consecutive",actualResult);
+       assertEquals("They are consecutive numbers",actualResult);
     }
 
     @Test
-    public void givenAStringArrayOfDigitsShouldReturnErrorStringIfNotConsecutive(){
-        String[] numbersArray={"12","16","18","15"};
+    public void givenAnIntegerArrayShouldReturnStringAsNotConsecutive(){
+        int[] numbersArray={5,16,6};
         String actualResult=consecutiveNumberCheck.consecutiveChecker(numbersArray);
-        assertEquals("The given numbers are not consecutive",actualResult);
+        assertEquals("They are not consecutive",actualResult);
     }
 
     @Test
-    public void givenAStringArrayOfDigitsShouldReturnErrorStringIfArrayHasCharacters(){
-        String[] numbersArray={"hello","16","18","15"};
+    public void givenAnIntegerArrayShouldReturnErrorIfInputIsSignleValue(){
+        int[] numbersArray={5};
         String actualResult=consecutiveNumberCheck.consecutiveChecker(numbersArray);
-        assertEquals("The given array should not contain Characters",actualResult);
+        assertEquals("cannot find if the input is single value",actualResult);
     }
+
 }

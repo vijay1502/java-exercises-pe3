@@ -22,9 +22,9 @@ MatrixSum matrixSum;
     public void givenAnIntegerArrayShouldReturnIntegerArray(){
         int[][] firstInput={{2,2},{3,3}};
         int[][] secondInput={{2,2},{3,3}};
-        int[][] result={{4,4},{6,6}};
-        int[][] actualOutput= matrixSum.arraySumMethod(firstInput,secondInput);
-        assertArrayEquals(result,actualOutput);
+        String result="[[4,4],[6,6]]";
+       String actualOutput= matrixSum.arraySumMethod(firstInput,secondInput,2,2);
+        assertEquals(result,actualOutput);
 
     }
 }
