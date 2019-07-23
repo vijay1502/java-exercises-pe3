@@ -19,12 +19,12 @@ ExceptionHandling exceptionHandling;
     }
     @Test
     public void givenAnIntegerShouldReturnStringStatingException(){
-        String actualResult=exceptionHandling.exception(30,0);
+        String actualResult=exceptionHandling.exceptionHandling(30,0);
         assertEquals("Can't divide a number by 0",actualResult);
     }
     @Test
     public void givenAnIntegerShouldReturnString(){
-        String actualResult=exceptionHandling.exception(30,5);
+        String actualResult=exceptionHandling.exceptionHandling(30,5);
         assertEquals("Result = 6",actualResult);
     }
 }

@@ -23,6 +23,7 @@ public class RepetitionOfWords {
                     {
                         count=count+1;
                         wordsArray[j]="";
+
                     }
                 }
                 if(wordsArray[i]!=""){
